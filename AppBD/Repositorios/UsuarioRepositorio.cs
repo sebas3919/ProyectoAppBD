@@ -24,22 +24,24 @@ namespace AppBD.Repositorios
                 using (var control = conexion.GetConnectionString())
                 {
                     await control.OpenAsync();
-                    string query = "INSERT INTO `users`(`id`, `name`, `email`, `password`, `role_id`) VALUES (@id, @name, @email, @password, @role_id)";
+
+                    string query = @"INSERT INTO users(name, email, password, role_id)
+                             VALUES (@name, @email, @password, @role_id)";
 
                     using (var cmd = new MySqlCommand(query, control))
                     {
-                        cmd.Parameters.AddWithValue("@id", usuario.Id);
                         cmd.Parameters.AddWithValue("@name", usuario.Name);
                         cmd.Parameters.AddWithValue("@email", usuario.Email);
                         cmd.Parameters.AddWithValue("@password", usuario.Password);
                         cmd.Parameters.AddWithValue("@role_id", usuario.RoleId);
+
                         await cmd.ExecuteNonQueryAsync();
                     }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al guardar el rol: " + ex.Message);
+                throw new Exception("Error al guardar usuario: " + ex.Message);
             }
         }
 

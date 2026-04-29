@@ -15,5 +15,7 @@ namespace AppBD.Modelos
 
         public string Password { get; set; }
         public int RoleId { get; set; } 
+
+        public int Codigo { get; set; }
     }
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activación Prime</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#0a0a0f; font-family:Segoe UI, Arial, sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+
+<!-- Contenedor principal -->
+<table width="600" cellpadding="0" cellspacing="0" style="margin:40px 0; background:#111116; border-radius:14px; overflow:hidden; border:1px solid #1f1f2b;">
+
+  <!-- Header -->
+  <tr>
+    <td align="center" style="padding:40px 20px; background:radial-gradient(circle at top, #1a1a2e, #0a0a0f);">
+      <h1 style="color:#d4af37; margin:0; font-size:28px; letter-spacing:2px;">
+        PROTOCOLO PRIME
+      </h1>
+      <p style="color:#7dd3fc; margin-top:10px; font-size:13px;">
+        Activación de Identidad Tenno
+      </p>
+    </td>
+  </tr>
+
+  <!-- Línea decorativa -->
+  <tr>
+    <td>
+      <div style="height:2px; background:linear-gradient(90deg, transparent, #d4af37, transparent);"></div>
+    </td>
+  </tr>
+
+  <!-- Contenido -->
+  <tr>
+    <td style="padding:40px 30px; text-align:center; color:#e4e4e7;">
+
+      <h2 style="color:#ffffff; margin-top:0;">
+        [nombre]
+      </h2>
+
+      <p style="font-size:15px; line-height:1.6; color:#a1a1aa;">
+        Tu registro ha sido aceptado en el sistema.<br>
+        Para completar el proceso, debes activar tu cuenta.
+      </p>
+
+      <!-- Botón estilo Prime -->
+      <a href="{{link_activacion}}"
+         style="display:inline-block; margin-top:30px; padding:16px 36px;
+         background:linear-gradient(135deg, #d4af37, #facc15);
+         color:#0a0a0f; text-decoration:none; font-weight:bold;
+         border-radius:10px; font-size:15px;
+         box-shadow:0 0 15px rgba(212,175,55,0.4);">
+         ACTIVAR CUENTA
+      </a>
+
+      <p style="margin-top:35px; font-size:13px; color:#71717a;">
+        Si no reconoces esta solicitud, ignora este mensaje.
+      </p>
+
+    </td>
+  </tr>
+
+  <!-- Footer -->
+  <tr>
+    <td style="padding:25px; text-align:center; font-size:12px; color:#52525b;">
+      Sistema Seguro • Protocolo Orokin<br>
+      © 2026 Tu Plataforma
+    </td>
+  </tr>
+
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

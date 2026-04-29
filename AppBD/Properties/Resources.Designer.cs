@@ -82,5 +82,29 @@ namespace AppBD.Properties {
                 return ResourceManager.GetString("Config", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///&lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        ///&lt;title&gt;Activación Prime&lt;/title&gt;
+        ///&lt;/head&gt;
+        ///
+        ///&lt;body style=&quot;margin:0; padding:0; background-color:#0a0a0f; font-family:Segoe UI, Arial, sans-serif;&quot;&gt;
+        ///
+        ///&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+        ///&lt;tr&gt;
+        ///&lt;td align=&quot;center&quot;&gt;
+        ///
+        ///&lt;!-- Contenedor principal --&gt;
+        ///&lt;table width=&quot;600&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;margin:40px 0; background:#111116; border-radius:14 [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Registro_txt {
+            get {
+                return ResourceManager.GetString("Registro.txt", resourceCulture);
+            }
+        }
     }
 }
