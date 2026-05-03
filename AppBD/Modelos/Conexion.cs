@@ -14,7 +14,7 @@ namespace AppBD.Modelos
 
         public Conexion()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["miprimerabase"].ConnectionString;
         }
 
         public MySqlConnection GetConnectionString()

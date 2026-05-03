@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="Controladores\PermisosController.cs" />
     <Compile Include="Controladores\RolesController.cs" />
+    <Compile Include="Controladores\RolPermisoController.cs" />
     <Compile Include="Controladores\UsersController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -107,10 +108,13 @@
     <Compile Include="Modelos\Conexion.cs" />
     <Compile Include="Modelos\Permisos.cs" />
     <Compile Include="Modelos\Rol.cs" />
+    <Compile Include="Modelos\RolPermiso.cs" />
+    <Compile Include="Modelos\RolPermisoViewModel.cs" />
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\PermisosRepositorio.cs" />
+    <Compile Include="Repositorios\RolPermisoRepositorio.cs" />
     <Compile Include="Repositorios\RolRepositorio.cs" />
     <Compile Include="Repositorios\UsuarioRepositorio.cs" />
     <Compile Include="Servicios\GmailServicios.cs" />
@@ -137,6 +141,12 @@
     </Compile>
     <Compile Include="Vistas\RolesView.Designer.cs">
       <DependentUpon>RolesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RolPermisoVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\RolPermisoVista.Designer.cs">
+      <DependentUpon>RolPermisoVista.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\UserView.cs">
       <SubType>Form</SubType>
@@ -168,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\RolesView.resx">
       <DependentUpon>RolesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\RolPermisoVista.resx">
+      <DependentUpon>RolPermisoVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\UserView.resx">
       <DependentUpon>UserView.cs</DependentUpon>

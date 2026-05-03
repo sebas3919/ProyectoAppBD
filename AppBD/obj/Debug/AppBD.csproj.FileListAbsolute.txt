@@ -88,3 +88,6 @@ C:\Users\ASUS TUF\Downloads\proyectoDB\ProyectoAppBD\AppBD\obj\Debug\AppBD.cspro
 C:\Users\ASUS TUF\Downloads\proyectoDB\ProyectoAppBD\AppBD\obj\Debug\AppBD.csproj.Up2Date
 C:\Users\ASUS TUF\Downloads\proyectoDB\ProyectoAppBD\AppBD\obj\Debug\AppBD.exe
 C:\Users\ASUS TUF\Downloads\proyectoDB\ProyectoAppBD\AppBD\obj\Debug\AppBD.pdb
+C:\Archivos to joya\Semestres\Cuarto semestre\Program3\AppBD\AppBD\obj\Debug\AppBD.Vistas.inicioVista.resources
+C:\Archivos to joya\Semestres\Cuarto semestre\Program3\AppBD\AppBD\obj\Debug\AppBD.Vistas.RegistroVista.resources
+C:\Archivos to joya\Semestres\Cuarto semestre\Program3\AppBD\AppBD\obj\Debug\AppBD.Vistas.RolPermisoVista.resources
