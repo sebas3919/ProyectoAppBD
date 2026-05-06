@@ -13,8 +13,8 @@ namespace AppBD.Servicios
 
         private readonly string smtpServer = "smtp.gmail.com";
         private readonly int smtpPort = 587;
-        private readonly string smtpUsername = "sebax39pj@gmail.com";
-        private readonly string smtpPassword = "bhylpmsbkjckbaur";
+        private readonly string smtpUsername = "gaaradesune@gmail.com";
+        private readonly string smtpPassword = "rgrrtpipvmoacmry";//<-- Aquí deberías usar una contraseña de aplicación de Gmail
 
         public async Task EnviarEmail(string destinatario, string asunto, string cuerpo)
         {

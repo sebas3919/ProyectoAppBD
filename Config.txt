@@ -1,68 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activar cuenta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificación Prime</title>
 </head>
-<body style="margin:0; padding:0; background-color:#f4f6f8; font-family: Arial, sans-serif;">
 
-  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f6f8; padding:20px 0;">
-    <tr>
-      <td align="center">
-        
-        <!-- Contenedor -->
-        <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-          
-          <!-- Header -->
-          <tr>
-            <td style="background:#4f46e5; padding:30px; text-align:center; color:#ffffff;">
-              <h1 style="margin:0; font-size:24px;">Bienvenido 👋</h1>
-              <p style="margin:10px 0 0;">Activa tu cuenta en segundos</p>
-            </td>
-          </tr>
+<body style="margin:0; padding:0; background-color:#0a0a0f; font-family:Segoe UI, Arial, sans-serif;">
 
-          <!-- Body -->
-          <tr>
-            <td style="padding:30px; color:#333;">
-              <h2 style="margin-top:0;">Hola, [nombre]</h2>
-              <p>
-                Gracias por registrarte. Para comenzar a usar tu cuenta, solo necesitas confirmarla haciendo clic en el botón de abajo:
-              </p>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
 
-              <!-- Botón -->
-              <div style="text-align:center; margin:30px 0;">
-                <a href="{{LINK_ACTIVACION}}" 
-                   style="background:#4f46e5; color:#ffffff; text-decoration:none; padding:15px 25px; border-radius:8px; display:inline-block; font-weight:bold;">
-                  Activar cuenta
-                </a>
-              </div>
+<!-- Contenedor principal -->
+<table width="600" cellpadding="0" cellspacing="0" style="margin:40px 0; background:#111116; border-radius:14px; overflow:hidden; border:1px solid #1f1f2b;">
 
-              <p style="font-size:14px; color:#666;">
-                Si el botón no funciona, copia y pega este enlace en tu navegador:
-              </p>
-              <p style="word-break:break-all; font-size:13px; color:#4f46e5;">
-                {{LINK_ACTIVACION}}
-              </p>
+  <!-- Header -->
+  <tr>
+    <td align="center" style="padding:40px 20px; background:radial-gradient(circle at top, #1a1a2e, #0a0a0f);">
+      <h1 style="color:#d4af37; margin:0; font-size:28px; letter-spacing:2px;">
+        PROTOCOLO PRIME
+      </h1>
+      <p style="color:#7dd3fc; margin-top:10px; font-size:13px;">
+        Verificación de Correo Tenno
+      </p>
+    </td>
+  </tr>
 
-              <p style="margin-top:30px;">
-                Si no creaste esta cuenta, puedes ignorar este correo.
-              </p>
-            </td>
-          </tr>
+  <!-- Línea decorativa -->
+  <tr>
+    <td>
+      <div style="height:2px; background:linear-gradient(90deg, transparent, #d4af37, transparent);"></div>
+    </td>
+  </tr>
 
-          <!-- Footer -->
-          <tr>
-            <td style="background:#f9fafb; padding:20px; text-align:center; font-size:12px; color:#888;">
-              © 2026 Tu Empresa. Todos los derechos reservados.
-            </td>
-          </tr>
+  <!-- Contenido -->
+  <tr>
+    <td style="padding:40px 30px; text-align:center; color:#e4e4e7;">
 
-        </table>
+      <h2 style="color:#ffffff; margin-top:0;">
+        [nombre]
+      </h2>
 
-      </td>
-    </tr>
-  </table>
+      <p style="font-size:15px; line-height:1.6; color:#a1a1aa;">
+        Hemos recibido una solicitud para verificar tu identidad dentro del sistema.<br>
+        Introduce el siguiente código para completar la validación de tu correo electrónico.
+      </p>
+
+      <!-- Código de verificación -->
+      <table align="center" cellpadding="8" cellspacing="8" style="margin-top:30px;">
+        <tr>
+          <td style="width:45px; height:55px; text-align:center; font-size:28px; font-weight:bold; color:#d4af37; border:1px solid #d4af37; border-radius:8px; background:#0f0f18;">
+           [c1]
+          </td>
+          <td style="width:45px; height:55px; text-align:center; font-size:28px; font-weight:bold; color:#d4af37; border:1px solid #d4af37; border-radius:8px; background:#0f0f18;">
+            [c2]
+          </td>
+          <td style="width:45px; height:55px; text-align:center; font-size:28px; font-weight:bold; color:#d4af37; border:1px solid #d4af37; border-radius:8px; background:#0f0f18;">
+            [c3]
+          </td>
+          <td style="width:45px; height:55px; text-align:center; font-size:28px; font-weight:bold; color:#d4af37; border:1px solid #d4af37; border-radius:8px; background:#0f0f18;">
+            [c4]
+          </td>
+          <td style="width:45px; height:55px; text-align:center; font-size:28px; font-weight:bold; color:#d4af37; border:1px solid #d4af37; border-radius:8px; background:#0f0f18;">
+            [c5]
+          </td>
+          <td style="width:45px; height:55px; text-align:center; font-size:28px; font-weight:bold; color:#d4af37; border:1px solid #d4af37; border-radius:8px; background:#0f0f18;">
+            [c6]
+          </td>
+        </tr>
+      </table>
+
+      <p style="margin-top:25px; font-size:14px; color:#7dd3fc;">
+        Este código expirará en 10 minutos.
+      </p>
+
+      <p style="margin-top:25px; font-size:13px; color:#71717a;">
+        Si no solicitaste esta verificación, ignora este mensaje.
+      </p>
+
+    </td>
+  </tr>
+
+  <!-- Footer -->
+  <tr>
+    <td style="padding:25px; text-align:center; font-size:12px; color:#52525b;">
+      Sistema Seguro • Protocolo Orokin<br>
+      © 2026 Tu Plataforma
+    </td>
+  </tr>
+
+</table>
+
+</td>
+</tr>
+</table>
 
 </body>
 </html>

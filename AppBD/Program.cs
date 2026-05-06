@@ -17,7 +17,7 @@ namespace AppBD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RolPermisoVista());
+            Application.Run(new UserView());
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using AppBD.Modelos;
+﻿using AppBD.DAO;
+using AppBD.Modelos;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -46,9 +47,9 @@ namespace AppBD.Repositorios
         }
 
 
-        public async Task<List<Usuario>> Listar()
+        public async Task<List<UserListDAO>> Listar()
         {
-            List<Usuario> list = new List<Usuario>();
+            List<UserListDAO> list = new List<UserListDAO>();
             try
             {
                 using (var connection = conexion.GetConnectionString())
@@ -56,20 +57,19 @@ namespace AppBD.Repositorios
 
                     await connection.OpenAsync();
 
-                    string query = "SELECT * FROM users";
+                    string query = "SELECT users.id, users.name as user_name, users.email, roles.name as role_name FROM `users` JOIN `roles` on `roles`.id = `users`.role_id";
                     using (var command = new MySqlCommand(query, connection))
                     {
 
                         var data = await command.ExecuteReaderAsync();
                         while (await data.ReadAsync())
                         {
-                            Usuario usuario = new Usuario()
+                            UserListDAO usuario = new UserListDAO()
                             {
                                 Id = data.GetInt32(data.GetOrdinal("id")),
-                                Name = data.GetString(data.GetOrdinal("name")),
+                                UserName = data.GetString(data.GetOrdinal("user_name")),
                                 Email = data.GetString(data.GetOrdinal("email")),
-                                Password = data.GetString(data.GetOrdinal("password")),
-                                RoleId = data.GetInt32(data.GetOrdinal("role_id"))
+                                Rolename = data.GetString(data.GetOrdinal("role_name"))
                             };
                             list.Add(usuario);
                         }
@@ -85,5 +85,100 @@ namespace AppBD.Repositorios
             }
             return list;
         }
+
+        public async Task<Usuario> ObtenerPorEmail(string email)
+        {
+            try
+            {
+                using (var connection = conexion.GetConnectionString())
+                {
+                    await connection.OpenAsync();
+
+                    string query = "SELECT * FROM users WHERE email = @email LIMIT 1";
+
+                    using (var cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@email", email);
+
+                        using (var reader = await cmd.ExecuteReaderAsync())
+                        {
+                            if (await reader.ReadAsync())
+                            {
+                                return new Usuario
+                                {
+                                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                                    Name = reader.GetString(reader.GetOrdinal("name")),
+                                    Email = reader.GetString(reader.GetOrdinal("email")),
+                                    Password = reader.GetString(reader.GetOrdinal("password")),
+                                    RoleId = reader.GetInt32(reader.GetOrdinal("role_id"))
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener usuario: " + ex.Message);
+            }
+
+            return null;
+        }
+
+        public async Task<bool> Delete(int id)
+        {
+            try
+            {
+                using (var connection = conexion.GetConnectionString())
+                {
+                    await connection.OpenAsync();
+                    string query = "DELETE FROM users WHERE id = @id";
+                    using (var cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar usuario: " + ex.Message);
+            }
+        }
+
+        public async Task<bool> EditarUsuario(Usuario usuario)
+        {
+            try
+            {
+                using (var connection = conexion.GetConnectionString())
+                {
+                    await connection.OpenAsync();
+
+                    string query = @"UPDATE users SET name = @name, email = @email,  password = @password, role_id = @role_id WHERE id = @id";
+
+                    using (var cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@id", usuario.Id);
+                        cmd.Parameters.AddWithValue("@name", usuario.Name);
+                        cmd.Parameters.AddWithValue("@email", usuario.Email);
+                        cmd.Parameters.AddWithValue("@password", usuario.Password);
+                        cmd.Parameters.AddWithValue("@role_id", usuario.RoleId);
+
+                        int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al editar usuario: " + ex.Message);
+            }
+        }
+
+
+
+
+
     }
 }

@@ -99,6 +99,7 @@
     <Compile Include="Controladores\RolesController.cs" />
     <Compile Include="Controladores\RolPermisoController.cs" />
     <Compile Include="Controladores\UsersController.cs" />
+    <Compile Include="DAO\UserListDAO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,12 +118,19 @@
     <Compile Include="Repositorios\RolPermisoRepositorio.cs" />
     <Compile Include="Repositorios\RolRepositorio.cs" />
     <Compile Include="Repositorios\UsuarioRepositorio.cs" />
+    <Compile Include="Servicios\AuthService.cs" />
     <Compile Include="Servicios\GmailServicios.cs" />
     <Compile Include="Vistas\inicioVista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\inicioVista.Designer.cs">
       <DependentUpon>inicioVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\OtpVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\OtpVista.Designer.cs">
+      <DependentUpon>OtpVista.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\PermisosView.cs">
       <SubType>Form</SubType>
@@ -169,6 +177,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\inicioVista.resx">
       <DependentUpon>inicioVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\OtpVista.resx">
+      <DependentUpon>OtpVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\PermisosView.resx">
       <DependentUpon>PermisosView.cs</DependentUpon>
